@@ -2,9 +2,9 @@ import React from 'react'
 import '../assets/css/product.css' 
 import { Link } from 'react-router-dom'
 
-const Products = ({pr,handleIsClicked,isClicked}) => {
+const Products = ({pr}) => {
    
-    // const{image,title,price} = props
+
     return (
         <> 
                <div class="col col-sm-3">
