@@ -1,0 +1,31 @@
+nav{
+    height: 17vh !important;
+    background-color: rgb(255, 204, 195);
+  }
+  .navbar-brand{
+    font-size: 50px !important;
+    font-weight: 500 !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .nav-link{
+    font-size: 23px !important;
+    
+  }
+  .cart-btn{
+    width: 100px;
+    font-size: 25px !important;
+    height: 50px;
+    background: none;
+    border: none;
+    background-color: darkslategray;
+    color: #fff;
+    font-size: 22px;
+    border-radius: 10px;
+    transition: all ease-in-out 0.2s;
+  }
+  .cart-btn:hover{
+    background-color: rgb(212, 247, 247);
+    color: darkslategray;
+    border: 2px solid darkslategray;
+    font-weight: 600;
+  }

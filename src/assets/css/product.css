@@ -1,0 +1,26 @@
+.card img{
+    height: 250px !important;
+    width: 200px !important;
+  }
+  .card{
+    width: 18rem;
+    height: 28rem !important;
+    margin: 15px !important;
+  }
+  .buy-btn{
+    height: 50px;
+    width: 150px;
+    background: none;
+    border: none;
+    background-color: darkslategray;
+    color: #fff;
+    font-size: 22px;
+    border-radius: 10px;
+    transition: all ease-in-out 0.2s;
+  }
+  .buy-btn:hover{
+    background-color: rgb(212, 247, 247);
+    color: darkslategray;
+    border: 2px solid darkslategray;
+    font-weight: 600;
+  }
