@@ -1,15 +1,22 @@
-import React from 'react'
+import React,{useEffect} from 'react'
+import { connect } from 'react-redux';
 import { useParams } from 'react-router-dom'
 import '../assets/css/productDetail.css'
+import { fetchProducts } from '../Redux';
 
-const ProductDetails = ({product}) => {
-  console.log(product);
+const ProductDetails = ({productData,fetchProducts}) => {
+
+  useEffect(()=>{
+    fetchProducts()
+  },[])
+
+  console.log(productData);
   const { id } = useParams()
 
     return (
     <>
      {
-      product.filter((prd) =>  prd.id == id )
+      productData.products.filter((prd) =>  prd.id == id )
       .map((prd)=>
       <div key={prd.id} className='container d-flex  productDetail'>
         <div >
@@ -33,4 +40,15 @@ const ProductDetails = ({product}) => {
   )
 }
 
-export default ProductDetails
+const mapStateToProps = ( state )=>{
+  return{
+    productData: state
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return{
+    fetchProducts: () => dispatch(fetchProducts())
+  }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(ProductDetails)
